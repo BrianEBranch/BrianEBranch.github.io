@@ -168,7 +168,7 @@ const Contact = () => {
               <h3 className="pixel-font text-xs terminal-glow mb-4">DIRECT CHANNELS</h3>
               <div className="space-y-3">
                 <a
-                  href="mailto:brian@example.com"
+                  href="mailto:brianramos892@gmail.com"
                   className="flex items-center gap-3 p-3 border border-brass/30 hover:border-primary hover:bg-primary/5 transition-all group"
                 >
                   <Mail className="w-4 h-4 brass-text group-hover:terminal-glow transition-colors" />
@@ -179,7 +179,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://github.com"
+                  href="https://github.com/BrianEBranch"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 border border-brass/30 hover:border-primary hover:bg-primary/5 transition-all group"
@@ -192,7 +192,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/brianramos1/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 border border-brass/30 hover:border-primary hover:bg-primary/5 transition-all group"

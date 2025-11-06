@@ -41,13 +41,13 @@ const About = () => {
             <div className="flex-1">
               <div className="mb-6">
                 <div className="terminal-font text-sm brass-text mb-1">DESIGNATION:</div>
-                <h2 className="text-2xl font-bold terminal-glow">BRIAN</h2>
+                <h2 className="text-2xl font-bold terminal-glow">BRIAN E. RAMOS-LEIVA</h2>
               </div>
 
               <div className="mb-6">
                 <div className="terminal-font text-sm brass-text mb-1">CLASSIFICATION:</div>
                 <div className="flex flex-wrap gap-2">
-                  {["ENGINEER", "BUILDER", "TINKERER", "RETRO ENTHUSIAST"].map((tag) => (
+                  {["ENGINEER", "BUILDER", "TINKERER", "GAMER XD"].map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 border border-brass bg-primary/10 pixel-font text-xs brass-text"
@@ -61,10 +61,8 @@ const About = () => {
               <div>
                 <div className="terminal-font text-sm brass-text mb-2">MISSION STATEMENT:</div>
                 <p className="text-foreground leading-relaxed">
-                  Building the future with tools from the past. I merge 1920s craftsmanship with
-                  modern technology, creating projects that blend industrial elegance with digital innovation.
-                  When I'm not wrangling code or soldering circuits, you'll find me exploring the
-                  intersection of retro-futurism and practical engineering.
+                  I'm Brian, a curious and creative tech nerd who loves blending my love for video games, creativity, and coding
+                  to build unique things. I'm driven by a passion for learning, exploring new ideas, sharing my work, and a ton of caffeine LOL.
                 </p>
               </div>
             </div>
@@ -77,22 +75,22 @@ const About = () => {
             {
               icon: Code,
               title: "SOFTWARE ENGINEERING",
-              items: ["Frontend Development", "React & TypeScript", "UI/UX Design", "Web Applications"],
+              items: ["Full-Stack Dev", "Data Structures & Algorithms", "Machine Learning", "Web Apps"],
             },
             {
               icon: Wrench,
-              title: "HARDWARE PROJECTS",
-              items: ["Electronics", "Mechanical Design", "Prototyping", "Retro Computing"],
+              title: "HARDWARE EXPERIENCE",
+              items: ["AI Assistant , Stanley", "IoT Integrations", "Embedded Systems", "Robotics Experiments"],
             },
             {
               icon: Zap,
               title: "SPECIALIZATIONS",
-              items: ["Retro Aesthetics", "Industrial Design", "System Architecture", "Creative Coding"],
+              items: ["Machine Learning", "Electronics & Mechatronics", "Data Visualization", "Data Analysis"],
             },
             {
               icon: FileText,
               title: "DOCUMENTATION",
-              items: ["Technical Writing", "Project Logs", "Tutorial Creation", "Knowledge Sharing"],
+              items: ["Lab Reports & Research Notes", "Project Guides", "Code Snippets & Templates", "Blogging"],
             },
           ].map((module, index) => {
             const Icon = module.icon;
@@ -125,24 +123,24 @@ const About = () => {
           <div className="space-y-6">
             {[
               {
-                year: "2020",
-                event: "TERMINAL INITIALIZATION",
-                description: "Began merging vintage aesthetics with modern tech",
-              },
-              {
-                year: "2021",
-                event: "HARDWARE INTEGRATION",
-                description: "Expanded into physical computing and retro electronics",
-              },
-              {
-                year: "2023",
-                event: "FULL SYSTEM DEPLOYMENT",
-                description: "Launched comprehensive project portfolio",
+                year: "2026",
+                event: "PLANNED GRADUATION!",
+                description: "Tentative graduation, Spring 2026!",
               },
               {
                 year: "2025",
-                event: "CURRENT OPERATIONS",
-                description: "Building the retro-futuristic web, one project at a time",
+                event: "DATA ENGINEERING INTERN",
+                description: "Began working as a Data Engineering Intern at TD Bank!",
+              },
+              {
+                year: "JUNE 2024",
+                event: "SOFTWARE ENGINEER INTERN",
+                description: "Began working as a SWE Intern at Lincoln Financial Group!",
+              },
+              {
+                year: "2022",
+                event: "STARTED MY ACADEMIC JOURNEY",
+                description: "Began studying Computer Science & Physics and conducting research at Temple University.",
               },
             ].map((entry, index) => (
               <div key={index} className="flex gap-4">

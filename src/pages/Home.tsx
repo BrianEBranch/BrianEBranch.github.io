@@ -45,19 +45,19 @@ const Home = () => {
             <h1 className="pixel-font text-2xl sm:text-3xl md:text-4xl terminal-glow mb-4">
               WELCOME TO
               <br />
-              BRIAN'S TERMINAL
+              BRIAN'S PIP-BOY
             </h1>
 
             <div className="h-px bg-brass my-6 mx-auto max-w-md" />
 
             {/* Subtitle */}
             <p className="terminal-font text-lg sm:text-xl md:text-2xl brass-text mb-8">
-              Engineering the Future with Retro Style
+              Engineering the Future as a Nerd!
             </p>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-              A personal data terminal from an alternate timeline where 1920s industrial design,
-              Fallout aesthetics, and 8-bit gaming culture merged into something beautiful.
+              My personal website which is meant to emulate the Pip-Boy from the Fallout franchise, featuring this pretty cool
+              retro UI, terminal style navigation, and some cool interactive elements.
             </p>
 
             {/* CTA Buttons */}
@@ -99,7 +99,7 @@ const Home = () => {
               {
                 icon: Radio,
                 title: "TRANSMISSION LOGS",
-                description: "Read dispatches from the workshop on technology, design, and retro-futurism",
+                description: "Read dispatches from the workshop on technology, design, and personal thoughts!",
                 link: "/blog",
               },
               {

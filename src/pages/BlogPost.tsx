@@ -1,105 +1,32 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Radio, Share2 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const BlogPost = () => {
   const { id } = useParams();
+  const [post, setPost] = useState(null);
 
-  // In a real app, this would fetch the post based on ID
-  const post = {
-    id: 1,
-    title: "Building a Retro Weather Station with Modern Sensors",
-    date: "2025-01-15",
-    category: "HARDWARE",
-    readTime: "8 min",
-    author: "BRIAN",
-    content: `
-# TRANSMISSION BEGIN
+  useEffect(() => {
+    const loadPost = async () => {
+      try {
+        // Dynamically import the post by ID
+        const module = await import(`../Blogs/${id}.js`);
+        setPost(module.default);
+      } catch (err) {
+        console.error("Post not found", err);
+      }
+    };
 
-Welcome to this technical dispatch on building a fully functional weather station that combines the elegance of 1920s instrument design with modern sensor technology.
+    loadPost();
+  }, [id]);
 
-## The Concept
-
-The idea came from wanting to display weather data in a way that felt more tangible and engaging than a simple digital readout. Vintage weather instruments have a certain charm - brass housings, analog dials, mechanical movements - that modern devices lack.
-
-## Hardware Components
-
-### Sensors
-- BME280 for temperature, humidity, and pressure
-- Anemometer for wind speed
-- Wind vane for direction
-- Rain gauge with tipping bucket mechanism
-
-### Microcontroller
-I chose an Arduino Mega for its multiple analog inputs and sufficient processing power. The extra I/O pins proved invaluable as the project grew.
-
-### Display Elements
-- Custom laser-cut brass dials
-- Vintage-style analog gauges (repurposed voltmeters)
-- Small OLED display for exact readings (hidden unless needed)
-- LED indicators for status
-
-## The Build Process
-
-### Phase 1: Sensor Integration
-First, I got all the sensors talking to the Arduino. The BME280 communicates via I2C, making it straightforward to integrate. The mechanical sensors required careful calibration.
-
-### Phase 2: Mechanical Design
-Using brass sheet metal, I fabricated the housing. This involved:
-- Cutting and bending brass panels
-- Drilling precise holes for gauges
-- Adding decorative rivets
-- Applying a aged patina finish
-
-### Phase 3: Electronics Assembly
-Wiring everything inside the brass enclosure was challenging but rewarding. I used vintage-style fabric-wrapped wire for authenticity.
-
-### Phase 4: Calibration
-Getting accurate readings took several iterations. Each gauge needed individual calibration curves mapped in software.
-
-## Code Architecture
-
-The Arduino code handles:
-- Sensor polling at appropriate intervals
-- Data smoothing and filtering
-- Gauge position calculations
-- Serial communication for logging
-- Error detection and recovery
-
-## Results
-
-The final weather station performs flawlessly while looking like it belongs in a 1920s radio station. It's both functional and a conversation piece.
-
-## Lessons Learned
-
-1. Metalworking takes patience and practice
-2. Calibration is more important than you think
-3. Document everything as you go
-4. The smallest details matter for authenticity
-5. Sometimes analog is more satisfying than digital
-
-## Future Improvements
-
-- Add wireless connectivity
-- Implement data logging to SD card
-- Create a matching indoor display unit
-- Build a protective housing for outdoor deployment
-
----
-
-## Technical Specifications
-
-**Dimensions:** 30cm x 20cm x 15cm  
-**Weight:** 2.3kg  
-**Power:** 12V DC, 500mA average  
-**Accuracy:** ±0.5°C, ±3% humidity  
-**Update Rate:** 10 seconds  
-**Materials:** Brass, steel, glass, wood  
-
-# TRANSMISSION END
-
-Thank you for reading this dispatch. Questions? Transmit them via the contact terminal.
-    `,
-  };
+  if (!post) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-muted-foreground">
+        Loading transmission...
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen pt-24 pb-16 px-4">
@@ -179,26 +106,35 @@ Thank you for reading this dispatch. Questions? Transmit them via the contact te
             RELATED TRANSMISSIONS
           </h3>
           <div className="space-y-4">
-            {[
-              { id: 2, title: "The Art of CRT Scanline Effects in CSS", category: "SOFTWARE" },
-              { id: 3, title: "Designing with Brass: Metalworking for Engineers", category: "HARDWARE" },
-            ].map((related) => (
-              <Link
-                key={related.id}
-                to={`/blog/${related.id}`}
-                className="block p-4 border border-brass/30 hover:border-primary hover:bg-primary/5 transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="terminal-font text-xs brass-text">{related.category}</span>
-                    <h4 className="text-sm font-medium group-hover:terminal-glow transition-colors mt-1">
-                      {related.title}
-                    </h4>
-                  </div>
-                  <ArrowLeft className="w-4 h-4 brass-text group-hover:terminal-glow transition-colors rotate-180" />
+            {/* Example: You could filter by category or pick manually */}
+            <Link
+              to={`/blog/2`}
+              className="block p-4 border border-brass/30 hover:border-primary hover:bg-primary/5 transition-all group"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <span className="terminal-font text-xs brass-text">SOFTWARE</span>
+                  <h4 className="text-sm font-medium group-hover:terminal-glow transition-colors mt-1">
+                    The Art of CRT Scanline Effects in CSS
+                  </h4>
                 </div>
-              </Link>
-            ))}
+                <ArrowLeft className="w-4 h-4 brass-text group-hover:terminal-glow transition-colors rotate-180" />
+              </div>
+            </Link>
+            <Link
+              to={`/blog/3`}
+              className="block p-4 border border-brass/30 hover:border-primary hover:bg-primary/5 transition-all group"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <span className="terminal-font text-xs brass-text">HARDWARE</span>
+                  <h4 className="text-sm font-medium group-hover:terminal-glow transition-colors mt-1">
+                    Designing with Brass: Metalworking for Engineers
+                  </h4>
+                </div>
+                <ArrowLeft className="w-4 h-4 brass-text group-hover:terminal-glow transition-colors rotate-180" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

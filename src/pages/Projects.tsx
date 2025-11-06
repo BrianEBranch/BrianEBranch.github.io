@@ -4,61 +4,51 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "RETRO WEATHER STATION",
+      title: "STANLEY AI ASSISTANT",
       category: "HARDWARE",
-      icon: Wrench,
-      description: "A vintage-styled weather monitoring system with brass gauges and analog displays, powered by modern sensors and microcontrollers.",
-      technologies: ["Arduino", "Metal Fabrication", "Sensor Integration", "Vintage Displays"],
+      icon: Cpu,
+      description: "Voice-activated AI assistant running on Raspberry Pi with facial recognition, wake word detection, and TTS capabilities.",
+      technologies: ["Python", "OpenAI API", "Raspberry Pi", "Facial Recognition"],
       status: "OPERATIONAL",
       color: "primary",
     },
     {
       id: 2,
-      title: "TERMINAL UI FRAMEWORK",
+      title: "NASA FIREBALLS MAP",
       category: "SOFTWARE",
       icon: Code,
-      description: "A React component library for building retro-futuristic interfaces with CRT effects, scanlines, and vintage terminal aesthetics.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Animation"],
-      status: "IN DEVELOPMENT",
+      description: "Visualized NASA fireball reports using Python, NumPy, Pandas, and Matplotlib to create an interactive data exploration tool.",
+      technologies: ["Python", "NumPy", "Pandas", "Matplotlib"],
+      status: "COMPLETED",
       color: "accent",
     },
     {
       id: 3,
-      title: "BRASS CALCULATOR",
-      category: "HARDWARE",
-      icon: Cpu,
-      description: "A functional mechanical calculator housed in a custom brass enclosure, combining vintage craftsmanship with modern electronics.",
-      technologies: ["PCB Design", "Metal Working", "Mechanical Engineering"],
-      status: "COMPLETED",
+      title: "CoBoards",
+      category: "SOFTWARE",
+      icon: Code,
+      description: "Developed a collaborative digital whiteboard for team design projects, improving productivity and reducing iteration cycles.",
+      technologies: ["React", "Firebase", "Tailwind CSS", "User Testing"],
+      status: "OPERATIONAL",
       color: "primary",
     },
     {
       id: 4,
-      title: "8-BIT PORTFOLIO SITE",
+      title: "WHERE'S BRIAN?",
       category: "SOFTWARE",
       icon: Code,
-      description: "A personal portfolio website designed to look like an NES game menu system with pixel art and chiptune music integration.",
-      technologies: ["React", "Pixel Art", "Audio API", "Game Design"],
-      status: "OPERATIONAL",
+      description: "Real-time web app where users compete against a KNN-based ML model to predict my location, with REST API and fast real-time updates.",
+      technologies: ["React", "Vite", "FastAPI", "Machine Learning", "KNN", "API Development"],
+      status: "IN DEVELOPMENT",
       color: "accent",
-    },
+  },
     {
       id: 5,
-      title: "STEAMPUNK KEYBOARD",
-      category: "HARDWARE",
-      icon: Wrench,
-      description: "A custom mechanical keyboard with brass keycaps, vintage typewriter styling, and individually addressable RGB backlighting.",
-      technologies: ["Mechanical Design", "Custom PCB", "QMK Firmware", "Metal Casting"],
-      status: "IN DEVELOPMENT",
-      color: "primary",
-    },
-    {
-      id: 6,
-      title: "FALLOUT PIP-BOY CLONE",
-      category: "HARDWARE",
-      icon: Cpu,
-      description: "A wearable device inspired by Fallout's Pip-Boy with real-time data display, environmental sensors, and retro terminal interface.",
-      technologies: ["Raspberry Pi", "3D Printing", "Python", "Electronics"],
+      title: "PERSONAL PORTFOLIO WEBSITE",
+      category: "SOFTWARE",
+      icon: Code,
+      description: "A Pip-Boy inspired portfolio website showcasing projects with retro UI and interactive elements.",
+      technologies: ["React", "Tailwind CSS", "Pixel Art", "Audio API"],
       status: "OPERATIONAL",
       color: "accent",
     },
@@ -77,7 +67,7 @@ const Projects = () => {
             PROJECT MODULES
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of hardware and software projects blending retro aesthetics with modern engineering
+            A collection of hardware and software projects
           </p>
           <div className="h-px bg-brass max-w-md mx-auto mt-6" />
         </div>
@@ -87,8 +77,8 @@ const Projects = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { label: "TOTAL MODULES", value: "6" },
-              { label: "OPERATIONAL", value: "3" },
-              { label: "IN DEVELOPMENT", value: "2" },
+              { label: "OPERATIONAL", value: "4" },
+              { label: "IN DEVELOPMENT", value: "1" },
               { label: "COMPLETED", value: "1" },
             ].map((stat) => (
               <div key={stat.label}>
