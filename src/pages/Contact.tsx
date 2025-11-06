@@ -174,7 +174,7 @@ const Contact = () => {
                   <Mail className="w-4 h-4 brass-text group-hover:terminal-glow transition-colors" />
                   <div>
                     <div className="terminal-font text-xs brass-text">EMAIL</div>
-                    <div className="text-xs text-muted-foreground">brian@example.com</div>
+                    <div className="text-xs text-muted-foreground">brianramos892@gmail.com</div>
                   </div>
                 </a>
 
@@ -187,7 +187,7 @@ const Contact = () => {
                   <Github className="w-4 h-4 brass-text group-hover:terminal-glow transition-colors" />
                   <div>
                     <div className="terminal-font text-xs brass-text">GITHUB</div>
-                    <div className="text-xs text-muted-foreground">@brian</div>
+                    <div className="text-xs text-muted-foreground">@BrianEBranch</div>
                   </div>
                 </a>
 
@@ -200,7 +200,7 @@ const Contact = () => {
                   <Linkedin className="w-4 h-4 brass-text group-hover:terminal-glow transition-colors" />
                   <div>
                     <div className="terminal-font text-xs brass-text">LINKEDIN</div>
-                    <div className="text-xs text-muted-foreground">Brian</div>
+                    <div className="text-xs text-muted-foreground">Brian E. Ramos-Leiva</div>
                   </div>
                 </a>
               </div>

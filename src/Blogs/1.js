@@ -1,4 +1,4 @@
-// src/Blogs/11_5_2025.js
+// src/Blogs/1.js
 const post = {
   id: 1,
   title: "Tesing Blog",
